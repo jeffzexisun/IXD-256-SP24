@@ -7,6 +7,6 @@ Project 1 - Golf Goal Installation using RGB
 
 https://github.com/jeffzexisun/IXD-256-SP24/assets/160269351/a5ec98b3-8e68-4d41-b9a7-7d6449c3e6cf
 
-Project 2 - Rotating Lamp using IMU
+Project 2 - Monitor Light Bar using IMU
 <img width="1026" alt="flow" src="https://github.com/jeffzexisun/IXD-256-SP24/assets/160269351/b82bbfd4-b785-4112-9764-d1716b9968a6">
 Demo Video:https://vimeo.com/918383484?share=copy
