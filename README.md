@@ -10,3 +10,9 @@ https://github.com/jeffzexisun/IXD-256-SP24/assets/160269351/a5ec98b3-8e68-4d41-
 Project 2 - Monitor Light Bar using IMU
 <img width="1026" alt="flow" src="https://github.com/jeffzexisun/IXD-256-SP24/assets/160269351/b82bbfd4-b785-4112-9764-d1716b9968a6">
 Demo Video:https://vimeo.com/918383484?share=copy
+
+
+Project 3 - Option Selector "Don't know what for Lunch?"
+
+Project 4(Final) - Unity Game "Catch Ball"
+<img width="945" alt="Game Example" src="https://github.com/jeffzexisun/IXD-256-SP24/assets/160269351/2525cbc7-d73e-4e74-b004-6dc90a1962d1">
