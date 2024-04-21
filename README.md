@@ -94,7 +94,7 @@ def loop():
 
 # Code In Unity
 ## Serial Communicate
-```c sharp
+```csharp
 public class arduinoCtrl : MonoBehaviour {
     // replace with your board's COM port
     SerialPort stream = new SerialPort("/dev/tty.usbmodemUiFlow2_1", 115200);
