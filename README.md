@@ -63,12 +63,37 @@ def loop():
 
 Project 4(Final) - Unity Game "Catch Ball"
 <img width="945" alt="Game Example" src="https://github.com/jeffzexisun/IXD-256-SP24/assets/160269351/2525cbc7-d73e-4e74-b004-6dc90a1962d1">
-```markdown
+
+Code in Main.py
+This code defines a set of variables used to detect and manage small shaking events on the M5Stack device. The variable last_accel is used to store the last acceleration value for comparison with the current value. small_shake_start_time records the time when a small shake begins, and small_shake_detected is a Boolean flag used to indicate whether the system has detected a small shake. In addition, small_shake_duration is set to 800 milliseconds, which defines the minimum duration required to confirm that the shake is valid, while small_shake_threshold sets the acceleration threshold that triggers shake detection, here is 0.4. These variables work together to help the system accurately identify and respond to small shaking events.
 ```python
-def hello_world():
-    print("Hello, world!")
+last_accel = 0
+small_shake_start_time = 0
+small_shake_detected = False 
+small_shake_duration = 800  
+small_shake_threshold = 0.4 
 ```
 
+This function is mainly used to monitor and record acceleration changes for subsequent data analysis or shaking detection logic. However, the current code snippet does not contain code that uses this acceleration data for further logical processing, such as shake detection and event triggering.
+```python
+def loop():
+    global last_trigger_time, trigger_interval
+    global last_accel, small_shake_start_time, small_shake_detected
+
+    M5.update()
+
+    # 获取加速度计的值
+    imu_val = Imu.getAccel()
+    imu_x_val = imu_val[0]
+    imu_y_val = imu_val[1]
+    imu_z_val = imu_val[2]
+    
+    print(imu_x_val, "|", imu_y_val, "|", imu_z_val)
+    time.sleep(0.01)
 ```
+
+
+
+
 
 
