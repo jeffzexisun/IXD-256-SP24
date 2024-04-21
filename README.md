@@ -61,7 +61,7 @@ def loop():
 
 
 
-Project 4(Final) - Unity Game "Catch Ball"
+# Project 4(Final) - Unity Game "Catch Ball"
 <img width="945" alt="Game Example" src="https://github.com/jeffzexisun/IXD-256-SP24/assets/160269351/2525cbc7-d73e-4e74-b004-6dc90a1962d1">
 
 ## Code in Main.py
@@ -90,6 +90,31 @@ def loop():
     
     print(imu_x_val, "|", imu_y_val, "|", imu_z_val)
     time.sleep(0.01)
+```
+
+# Code In Unity
+## Serial Communicate
+```c sharp
+public class arduinoCtrl : MonoBehaviour {
+    // replace with your board's COM port
+    SerialPort stream = new SerialPort("/dev/tty.usbmodemUiFlow2_1", 115200);
+
+    public Transform t;
+
+    void Start()
+    {
+        stream.Open();
+    }
+
+    void Update()
+    {
+        //Vector3 lastData = Vector3.zero;
+        string lastData = "";
+
+        string UnSplitData = stream.ReadLine();
+        Debug.Log(UnSplitData);
+        lastData = UnSplitData;
+    }
 ```
 
 
