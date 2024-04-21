@@ -23,6 +23,40 @@ Flow Chart:
 ![states](https://github.com/jeffzexisun/IXD-256-SP24/assets/160269351/afc006c3-f711-4466-b0ab-557e876c2b10)
 
 Code:
+Control the servo to rotate 45 degrees to ensure that the servo angle does not exceed 180 degrees, and then pause briefly to complete the servo movement.
+```python
+def rotate_45_degrees():
+    """每次旋转45度"""
+    global last_angle
+    next_angle = (last_angle + 45) % 180  # 计算下一个角度，确保不超过舵机范围
+    servo.move(next_angle)
+    last_angle = next_angle  # 更新最后的角度
+    time.sleep_ms(100)  # 短暂暂停，以便完成移动
+```
+
+Continuously monitor the ADC readings, control the servo to start rotating based on the readings and stop rotating after a specified time, and then update the displayed ADC value.
+```python
+def loop():
+    global is_rotating, last_move_time, rotation_duration
+    current_time = time.time()
+    
+    adc_val = adc1.read()
+    if adc_val > 3400 and not is_rotating:
+        # 开始旋转
+        is_rotating = True
+        rotation_duration = random.randint(2, 4)  # 随机旋转时间
+        last_move_time = current_time
+
+    if is_rotating:
+        if (current_time - last_move_time) <= rotation_duration:
+            rotate_45_degrees()  # 每次旋转45度
+        else:
+            servo.move(90)  # 停止，回到90度位置
+            is_rotating = False
+    label0.setText(str(adc_val))
+```
+
+
 
 
 
