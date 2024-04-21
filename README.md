@@ -22,7 +22,7 @@ Flow Chart:
 <img width="752" alt="states" src="https://github.com/jeffzexisun/IXD-256-SP24/assets/160269351/5e7546a2-d887-4a92-ae4d-4afa9b617de2">
 ![states](https://github.com/jeffzexisun/IXD-256-SP24/assets/160269351/afc006c3-f711-4466-b0ab-557e876c2b10)
 
-Code:
+##Code:
 Control the servo to rotate 45 degrees to ensure that the servo angle does not exceed 180 degrees, and then pause briefly to complete the servo movement.
 ```python
 def rotate_45_degrees():
@@ -64,7 +64,7 @@ def loop():
 Project 4(Final) - Unity Game "Catch Ball"
 <img width="945" alt="Game Example" src="https://github.com/jeffzexisun/IXD-256-SP24/assets/160269351/2525cbc7-d73e-4e74-b004-6dc90a1962d1">
 
-Code in Main.py
+##Code in Main.py
 This code defines a set of variables used to detect and manage small shaking events on the M5Stack device. The variable last_accel is used to store the last acceleration value for comparison with the current value. small_shake_start_time records the time when a small shake begins, and small_shake_detected is a Boolean flag used to indicate whether the system has detected a small shake. In addition, small_shake_duration is set to 800 milliseconds, which defines the minimum duration required to confirm that the shake is valid, while small_shake_threshold sets the acceleration threshold that triggers shake detection, here is 0.4. These variables work together to help the system accurately identify and respond to small shaking events.
 ```python
 last_accel = 0
